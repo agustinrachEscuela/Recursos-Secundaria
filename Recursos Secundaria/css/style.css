@@ -1,0 +1,777 @@
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --color-principal: #2563eb;
+    --color-principal-hover: #1d4ed8;
+
+    --color-fondo: #f8fafc;
+
+    --color-blanco: #ffffff;
+
+    --color-texto: #0f172a;
+
+    --color-secundario: #64748b;
+
+    --color-borde: #dbe3ed;
+
+    --color-solucion: #eff6ff;
+
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--color-fondo);
+
+    color:
+        var(--color-texto);
+
+    line-height: 1.6;
+
+}
+
+
+h1,
+h2,
+h3 {
+
+    margin-top: 0;
+
+}
+
+
+p {
+
+    margin-top: 0;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =====================================================
+   CÓDIGO
+===================================================== */
+
+pre {
+
+    background: #0f172a;
+
+    color: #e2e8f0;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    overflow-x: auto;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+code {
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        var(--color-blanco);
+
+    border-bottom:
+        1px solid
+        var(--color-borde);
+
+    padding:
+        15px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.logo {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color:
+        var(--color-principal);
+
+    cursor: pointer;
+
+}
+
+
+nav a {
+
+    color:
+        var(--color-texto);
+
+    text-decoration: none;
+
+    margin-left: 20px;
+
+    font-weight: bold;
+
+}
+
+
+nav a:hover {
+
+    color:
+        var(--color-principal);
+
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding:
+        40px 30px;
+
+}
+
+
+.oculto {
+
+    display: none !important;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    text-align: center;
+
+    padding:
+        50px 20px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.hero h1 {
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.hero p {
+
+    color:
+        var(--color-secundario);
+
+    font-size: 18px;
+
+}
+
+
+/* =====================================================
+   AÑOS
+===================================================== */
+
+.grid-anios {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 20px;
+
+}
+
+
+.card-anio {
+
+    background:
+        var(--color-blanco);
+
+    border:
+        1px solid
+        var(--color-borde);
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+
+}
+
+
+.card-anio:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+.card-anio h2 {
+
+    color:
+        var(--color-principal);
+
+}
+
+
+/* =====================================================
+   CABECERAS
+===================================================== */
+
+.cabecera-seccion {
+
+    margin-bottom: 30px;
+
+}
+
+
+.cabecera-seccion h1 {
+
+    font-size: 36px;
+
+}
+
+
+.cabecera-seccion p {
+
+    color:
+        var(--color-secundario);
+
+}
+
+
+.cabecera-tema {
+
+    margin-bottom: 25px;
+
+}
+
+
+.cabecera-tema h1 {
+
+    font-size: 34px;
+
+}
+
+
+/* =====================================================
+   TEMAS
+===================================================== */
+
+#listaTemas {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(280px, 1fr)
+        );
+
+    gap: 20px;
+
+}
+
+
+.card-tema {
+
+    background:
+        var(--color-blanco);
+
+    border:
+        1px solid
+        var(--color-borde);
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+
+}
+
+
+.card-tema:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+.card-tema h3 {
+
+    color:
+        var(--color-principal);
+
+}
+
+
+.card-tema p {
+
+    color:
+        var(--color-secundario);
+
+}
+
+
+/* =====================================================
+   PESTAÑAS
+===================================================== */
+
+.pestanas {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+    border-bottom:
+        1px solid
+        var(--color-borde);
+
+}
+
+
+.pestana {
+
+    border: none;
+
+    background: transparent;
+
+    padding:
+        12px 20px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    color:
+        var(--color-secundario);
+
+    border-bottom:
+        3px solid
+        transparent;
+
+}
+
+
+.pestana:hover {
+
+    color:
+        var(--color-principal);
+
+}
+
+
+.pestana.activa {
+
+    color:
+        var(--color-principal);
+
+    border-bottom:
+        3px solid
+        var(--color-principal);
+
+}
+
+
+/* =====================================================
+   CONTENIDO PESTAÑAS
+===================================================== */
+
+.contenido-pestana {
+
+    display: none;
+
+}
+
+
+.contenido-pestana.activa {
+
+    display: block;
+
+}
+
+
+/* =====================================================
+   BLOQUES
+===================================================== */
+
+.bloque {
+
+    background:
+        var(--color-blanco);
+
+    border:
+        1px solid
+        var(--color-borde);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.bloque h3 {
+
+    color:
+        var(--color-principal);
+
+}
+
+
+/* =====================================================
+   EJERCICIOS
+===================================================== */
+
+.ejercicio {
+
+    background:
+        var(--color-blanco);
+
+    border:
+        1px solid
+        var(--color-borde);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.ejercicio h3 {
+
+    color:
+        var(--color-principal);
+
+    margin-bottom: 20px;
+
+}
+
+
+.ejercicio p {
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =====================================================
+   BOTÓN VER SOLUCIÓN
+===================================================== */
+
+.boton-solucion {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding:
+        10px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        var(--color-principal);
+
+    color: white;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+
+}
+
+
+.boton-solucion:hover {
+
+    background:
+        var(--color-principal-hover);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =====================================================
+   SOLUCIÓN
+===================================================== */
+
+.solucion {
+
+    margin-top: 15px;
+
+    padding: 20px;
+
+    background:
+        var(--color-solucion);
+
+    border-left:
+        4px solid
+        var(--color-principal);
+
+    border-radius: 8px;
+
+}
+
+
+.solucion strong {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color:
+        var(--color-principal);
+
+}
+
+
+.solucion p {
+
+    margin-bottom: 10px;
+
+}
+
+
+.solucion pre {
+
+    margin:
+        10px 0 0 0;
+
+}
+
+
+/* =====================================================
+   BOTÓN VOLVER
+===================================================== */
+
+.boton-volver {
+
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    padding:
+        10px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        #e2e8f0;
+
+    color:
+        var(--color-texto);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.boton-volver:hover {
+
+    background:
+        #cbd5e1;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    margin-top: 60px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    color:
+        var(--color-secundario);
+
+    border-top:
+        1px solid
+        var(--color-borde);
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    header {
+
+        padding: 15px;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+    nav a {
+
+        margin:
+            0 8px;
+
+    }
+
+
+    main {
+
+        padding:
+            30px 15px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .cabecera-seccion h1,
+    .cabecera-tema h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .pestanas {
+
+        overflow-x: auto;
+
+    }
+
+
+    .pestana {
+
+        white-space: nowrap;
+
+    }
+
+}

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Aula de Programación</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- ==========================================
+         ENCABEZADO
+         ========================================== -->
+
+    <header class="header">
+
+        <div class="logo">
+            &lt;/&gt; Aula de Programación
+        </div>
+
+        <nav class="nav">
+            <button onclick="irInicio()">
+                Inicio
+            </button>
+        </nav>
+
+    </header>
+
+
+    <!-- ==========================================
+         CONTENIDO PRINCIPAL
+         ========================================== -->
+
+    <main>
+
+
+        <!-- ======================================
+             INICIO
+             ====================================== -->
+
+        <section id="inicio" class="seccion">
+
+            <div class="hero">
+
+                <p class="etiqueta">
+                    ESCUELA DE ARTES
+                </p>
+
+                <h1>
+                    Aula de Programación
+                </h1>
+
+                <p class="hero-texto">
+                    Material de estudio, ejemplos y actividades
+                    para aprender programación.
+                </p>
+
+            </div>
+
+
+            <div class="contenedor">
+
+                <h2>
+                    Elegí tu año
+                </h2>
+
+                <div class="grid-anios">
+
+
+                    <!-- 1° AÑO -->
+
+                    <div
+                        class="card-anio"
+                        onclick="mostrarAnio(1)"
+                    >
+
+                        <span class="numero-anio">
+                            1°
+                        </span>
+
+                        <h3>
+                            Primer Año
+                        </h3>
+
+                        <p>
+                            HTML, CSS y fundamentos de JavaScript.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 2° AÑO -->
+
+                    <div
+                        class="card-anio"
+                        onclick="mostrarAnio(2)"
+                    >
+
+                        <span class="numero-anio">
+                            2°
+                        </span>
+
+                        <h3>
+                            Segundo Año
+                        </h3>
+
+                        <p>
+                            JavaScript y lógica de programación.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 3° AÑO -->
+
+                    <div
+                        class="card-anio"
+                        onclick="mostrarAnio(3)"
+                    >
+
+                        <span class="numero-anio">
+                            3°
+                        </span>
+
+                        <h3>
+                            Tercer Año
+                        </h3>
+
+                        <p>
+                            DOM, eventos y aplicaciones web.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 4° AÑO -->
+
+                    <div
+                        class="card-anio"
+                        onclick="mostrarAnio(4)"
+                    >
+
+                        <span class="numero-anio">
+                            4°
+                        </span>
+
+                        <h3>
+                            Cuarto Año
+                        </h3>
+
+                        <p>
+                            POO, LocalStorage y proyectos.
+                        </p>
+
+                    </div>
+
+
+                    <!-- 5° AÑO -->
+
+                    <div
+                        class="card-anio"
+                        onclick="mostrarAnio(5)"
+                    >
+
+                        <span class="numero-anio">
+                            5°
+                        </span>
+
+                        <h3>
+                            Quinto Año
+                        </h3>
+
+                        <p>
+                            Programación avanzada y desarrollo.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             AÑO
+             ====================================== -->
+
+        <section
+            id="anio"
+            class="seccion oculto"
+        >
+
+            <div class="contenedor">
+
+                <button
+                    class="boton-volver"
+                    onclick="irInicio()"
+                >
+                    ← Volver al inicio
+                </button>
+
+
+                <div class="titulo-anio">
+
+                    <span class="etiqueta">
+                        MATERIAL DE ESTUDIO
+                    </span>
+
+                    <h2 id="tituloAnio">
+                        Año
+                    </h2>
+
+                    <p id="descripcionAnio">
+                    </p>
+
+                </div>
+
+
+                <div id="listaTemas" class="grid-temas">
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ======================================
+             TEMA
+             ====================================== -->
+
+        <section
+            id="tema"
+            class="seccion oculto"
+        >
+
+            <div class="contenedor">
+
+                <button
+                    class="boton-volver"
+                    onclick="volverAnio()"
+                >
+                    ← Volver a las unidades
+                </button>
+
+
+                <div class="titulo-tema">
+
+                    <h2 id="tituloTema">
+                        Tema
+                    </h2>
+
+                </div>
+
+
+                <!-- PESTAÑAS -->
+
+                <div class="pestanas">
+
+                    <button
+                        class="pestana activa"
+                        onclick="mostrarPestana('teoria', this)"
+                    >
+                        📖 Teoría
+                    </button>
+
+                    <button
+                        class="pestana"
+                        onclick="mostrarPestana('ejemplos', this)"
+                    >
+                        💻 Ejemplos
+                    </button>
+
+                    <button
+                        class="pestana"
+                        onclick="mostrarPestana('practica', this)"
+                    >
+                        ✏️ Práctica
+                    </button>
+
+                </div>
+
+
+                <!-- CONTENIDO TEORÍA -->
+
+                <div
+                    id="contenido-teoria"
+                    class="contenido-pestana activa"
+                >
+                </div>
+
+
+                <!-- CONTENIDO EJEMPLOS -->
+
+                <div
+                    id="contenido-ejemplos"
+                    class="contenido-pestana"
+                >
+                </div>
+
+
+                <!-- CONTENIDO PRÁCTICA -->
+
+                <div
+                    id="contenido-practica"
+                    class="contenido-pestana"
+                >
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         PIE DE PÁGINA
+         ========================================== -->
+
+    <footer class="footer">
+
+        <p>
+            Aula de Programación · Escuela de Artes
+        </p>
+
+        <p>
+            Material educativo
+        </p>
+
+    </footer>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+
+    <<script src="js/anio1.js"></script>
+<script src="js/anio2.js"></script>
+<script src="js/anio3.js"></script>
+<script src="js/anio4.js"></script>
+<script src="js/anio5.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
