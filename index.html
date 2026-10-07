@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <link rel="icon" type="image/png" href="https://www.shareicon.net/download/2015/11/08/669057_sign_512x512.png">
+
     <meta charset="UTF-8">
 
     <meta
@@ -10,41 +11,63 @@
         content="width=device-width, initial-scale=1.0"
     >
 
+    <link
+        rel="icon"
+        type="image/png"
+        href="https://www.shareicon.net/download/2015/11/08/669057_sign_512x512.png"
+    >
+
     <title>Aula de Programación</title>
 
+    <!-- CSS -->
     <link
         rel="stylesheet"
-        href="css/style.css"
+        href="Recursos Secundaria/css/style.css"
     >
+
 </head>
 
+
 <body>
+
 
     <!-- ==========================================
          ENCABEZADO
          ========================================== -->
 
-<header>
+    <header>
 
-    <div class="encabezado-logo" onclick="irInicio()">
-        <div>
-        <img
-            src="Logo Escuela.png"
-            alt="Logo de la Escuela"
+        <div
+            class="encabezado-logo"
+            onclick="irInicio()"
         >
-</div>
-    
-        <div class="encabezado-titulo">
 
-            <span class="codigo">&lt;/&gt;</span>
+            <div>
 
-            <span>Aula de Programación</span>
+                <img
+                    src="Recursos Secundaria/Logo Escuela.png"
+                    alt="Logo de la Escuela"
+                >
+
+            </div>
+
+
+            <div class="encabezado-titulo">
+
+                <span class="codigo">
+                    &lt;/&gt;
+                </span>
+
+                <span>
+                    Aula de Programación
+                </span>
+
+            </div>
 
         </div>
-    </div>
-    
 
-</header>
+    </header>
+
 
 
     <!-- ==========================================
@@ -58,7 +81,10 @@
              INICIO
              ====================================== -->
 
-        <section id="inicio" class="seccion">
+        <section
+            id="inicio"
+            class="seccion"
+        >
 
             <div class="hero">
 
@@ -66,9 +92,11 @@
                     ESCUELA DE ARTES
                 </p>
 
+
                 <h1>
                     Aula de Programación
                 </h1>
+
 
                 <p class="hero-texto">
                     Material de estudio, ejemplos y actividades
@@ -78,16 +106,20 @@
             </div>
 
 
+
             <div class="contenedor">
 
                 <h2>
                     Elegí tu año
                 </h2>
 
+
                 <div class="grid-anios">
 
 
-                    <!-- 1° AÑO -->
+                    <!-- ==========================
+                         1° AÑO
+                         ========================== -->
 
                     <div
                         class="card-anio"
@@ -98,9 +130,11 @@
                             1°
                         </span>
 
+
                         <h3>
                             Primer Año
                         </h3>
+
 
                         <p>
                             HTML, CSS y fundamentos de JavaScript.
@@ -109,7 +143,10 @@
                     </div>
 
 
-                    <!-- 2° AÑO -->
+
+                    <!-- ==========================
+                         2° AÑO
+                         ========================== -->
 
                     <div
                         class="card-anio"
@@ -120,9 +157,11 @@
                             2°
                         </span>
 
+
                         <h3>
                             Segundo Año
                         </h3>
+
 
                         <p>
                             JavaScript y lógica de programación.
@@ -131,7 +170,10 @@
                     </div>
 
 
-                    <!-- 3° AÑO -->
+
+                    <!-- ==========================
+                         3° AÑO
+                         ========================== -->
 
                     <div
                         class="card-anio"
@@ -142,9 +184,11 @@
                             3°
                         </span>
 
+
                         <h3>
                             Tercer Año
                         </h3>
+
 
                         <p>
                             DOM, eventos y aplicaciones web.
@@ -153,7 +197,10 @@
                     </div>
 
 
-                    <!-- 4° AÑO -->
+
+                    <!-- ==========================
+                         4° AÑO
+                         ========================== -->
 
                     <div
                         class="card-anio"
@@ -164,9 +211,11 @@
                             4°
                         </span>
 
+
                         <h3>
                             Cuarto Año
                         </h3>
+
 
                         <p>
                             POO, LocalStorage y proyectos.
@@ -175,7 +224,10 @@
                     </div>
 
 
-                    <!-- 5° AÑO -->
+
+                    <!-- ==========================
+                         5° AÑO
+                         ========================== -->
 
                     <div
                         class="card-anio"
@@ -186,9 +238,11 @@
                             5°
                         </span>
 
+
                         <h3>
                             Quinto Año
                         </h3>
+
 
                         <p>
                             Programación avanzada y desarrollo.
@@ -215,6 +269,7 @@
 
             <div class="contenedor">
 
+
                 <button
                     class="boton-volver"
                     onclick="irInicio()"
@@ -223,15 +278,19 @@
                 </button>
 
 
+
                 <div class="titulo-anio">
+
 
                     <span class="etiqueta">
                         MATERIAL DE ESTUDIO
                     </span>
 
+
                     <h2 id="tituloAnio">
                         Año
                     </h2>
+
 
                     <p id="descripcionAnio">
                     </p>
@@ -239,7 +298,11 @@
                 </div>
 
 
-                <div id="listaTemas" class="grid-temas">
+
+                <div
+                    id="listaTemas"
+                    class="grid-temas"
+                >
                 </div>
 
             </div>
@@ -259,12 +322,14 @@
 
             <div class="contenedor">
 
+
                 <button
                     class="boton-volver"
                     onclick="volverAnio()"
                 >
                     ← Volver a las unidades
                 </button>
+
 
 
                 <div class="titulo-tema">
@@ -276,9 +341,13 @@
                 </div>
 
 
-                <!-- PESTAÑAS -->
+
+                <!-- ==============================
+                     PESTAÑAS
+                     ============================== -->
 
                 <div class="pestanas">
+
 
                     <button
                         class="pestana activa"
@@ -287,12 +356,14 @@
                         📖 Teoría
                     </button>
 
+
                     <button
                         class="pestana"
                         onclick="mostrarPestana('ejemplos', this)"
                     >
                         💻 Ejemplos
                     </button>
+
 
                     <button
                         class="pestana"
@@ -304,7 +375,10 @@
                 </div>
 
 
-                <!-- CONTENIDO TEORÍA -->
+
+                <!-- ==============================
+                     CONTENIDO TEORÍA
+                     ============================== -->
 
                 <div
                     id="contenido-teoria"
@@ -313,7 +387,10 @@
                 </div>
 
 
-                <!-- CONTENIDO EJEMPLOS -->
+
+                <!-- ==============================
+                     CONTENIDO EJEMPLOS
+                     ============================== -->
 
                 <div
                     id="contenido-ejemplos"
@@ -322,7 +399,10 @@
                 </div>
 
 
-                <!-- CONTENIDO PRÁCTICA -->
+
+                <!-- ==============================
+                     CONTENIDO PRÁCTICA
+                     ============================== -->
 
                 <div
                     id="contenido-practica"
@@ -348,6 +428,7 @@
             Aula de Programación · Escuela de Artes
         </p>
 
+
         <p>
             Material educativo
         </p>
@@ -360,12 +441,18 @@
          JAVASCRIPT
          ========================================== -->
 
-    <<script src="js/anio1.js"></script>
-<script src="js/anio2.js"></script>
-<script src="js/anio3.js"></script>
-<script src="js/anio4.js"></script>
-<script src="js/anio5.js"></script>
-<script src="js/app.js"></script>
+    <script src="Recursos Secundaria/js/anio1.js"></script>
+
+    <script src="Recursos Secundaria/js/anio2.js"></script>
+
+    <script src="Recursos Secundaria/js/anio3.js"></script>
+
+    <script src="Recursos Secundaria/js/anio4.js"></script>
+
+    <script src="Recursos Secundaria/js/anio5.js"></script>
+
+    <script src="Recursos Secundaria/js/app.js"></script>
+
 
 </body>
 
